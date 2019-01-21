@@ -1,7 +1,7 @@
 import datetime
 
 COMMENT = []
-LOGGED_IN= []
+LOGGED_IN = []
 USER = []
 
 
@@ -24,6 +24,21 @@ class User(object):
         }
 
         USER.append(newUser)
+
+    def login_user(self, username, password):
+        """Login user"""
+        users = USER
+        logger = LOGGED_IN
+        for user in users:
+            if user["username"] == username and user["password"] == password:
+                logged_in = {
+                    "username": username,
+                    "lastLoggedInAt": datetime.datetime.utcnow().strftime("%D %H:%M")
+                }
+                logger.append(logged_in)
+            else:
+                print("username or password are incorrect")
+        return username
 
 class Moderator(User):
     """docstring for Moderator."""
