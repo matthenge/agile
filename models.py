@@ -40,6 +40,15 @@ class User(object):
                 print("username or password are incorrect")
         return username
 
+    def logout_user(self, username):
+        """Logout user"""
+        users = USER
+        logger = LOGGED_IN
+        for user in users:
+            if user["username"] == username:
+                logger.remove(user)
+                print("Logged out!")
+
 class Moderator(User):
     """docstring for Moderator."""
     pass
