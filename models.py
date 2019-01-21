@@ -152,13 +152,39 @@ class Comment:
 
 
 if __name__ == '__main__':
-    iAm = User("myUser", "password","Newser")
+    fName = input("Enter your firstname: ")
+    userName = input("Enter your new Username: ")
+    myPassword = input("Enter your password: ")
+    iAm = User(userName, myPassword,fName)
     iAm.signup_user()
-    logged_user = iAm.login_user("myUser","password")
+    print("""
+
+        ----------------------------------------
+
+        You are now logging in
+
+    """)
+    whoAmI = input("Enter your Username: ")
+    myPass = input("Enter your password: ")
+
+    logged_user = iAm.login_user(whoAmI,myPass)
     print(logged_user)
+    print("""
+        ----------------------------------------
+
+    """)
     myComment = Comment()
-    myComment.get_comment(logged_user, "Mi`ss me")
+    addComment = input("Enter your comment: ")
+    myComment.get_comment(logged_user, addComment)
+    print("""
+        ----------------------------------------
+
+    """)
     the_id = myComment.add_comment()
     iAm.login_user(logged_user,"password")
+    print("""
+        ----------------------------------------
+
+    """)
     iAm.edit_comment(the_id, logged_user)
     Admin.delete_comment(the_id)
