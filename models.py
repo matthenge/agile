@@ -1,3 +1,5 @@
+import datetime
+
 class User(object):
     """ main user creation class """
     def __init__(self, username,password,firstname):
@@ -19,4 +21,13 @@ class Admin(Moderator):
 
 class Comment:
     """docstring for Comment."""
-    pass
+    comments = []
+    def add_comment(comment):
+        comment = input("Add your comment here: ")
+        commented_at = datetime.datetime.utcnow()
+
+
+if __name__ == '__main__':
+    while True:
+        "Welcome to The agile group challenge: "
+        pass
