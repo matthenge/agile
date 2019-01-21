@@ -14,29 +14,24 @@ class User(object):
         self.password = password
         self.role = "user"
 
-    def add_default_role(self)
+    def edit_comment(self, com_id):
+        """ Edits user comment """
+        for user in LOGGED_IN:
+            if user['username'] == self.username: 
+                for com in COMMENT:
+                    if com['id'] == com_id:
+                        comment = com
+                    print(comment)
+                if comment['user'] == self.username:
+                        print("Your comment : {}".format(comment['comment']))
+                        newComment = input("Edit comment: ")
+                        comment['comment'] = newComment
 
-class Moderator(User):
-    """docstring for Moderator."""
-    pass
+                        comment['commented at'] = datetime.datetime.utcnow().strftime("%D %H:%M")
+                        print(comment)
+                        
+                else:
+                    print('You are not allowed to edit this comment')
 
-class Admin(Moderator):
-    """docstring for Admin."""
-    pass
-
-class Comment:
-    """docstring for Comment."""
-    def get_comment(comment):
-        comment = input("Add your comment here: ")
-        commented_at = datetime.datetime.utcnow()
-        new_comment = {
-        "user" :
-        }
-    def add_comment()
-
-
-
-if __name__ == '__main__':
-    while True:
-        "Welcome to The agile group challenge: "
-        pass
+            else:
+                print('Please login')
