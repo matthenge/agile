@@ -73,7 +73,15 @@ class User(object):
 
 class Moderator(User):
     """docstring for Moderator."""
-    pass
+    def delete_comment(self, com_id):
+        """ delete user comment """
+        for user in LOGGED_IN:
+            if user['username'] == self.username: 
+                for com in COMMENT:
+                    if com['id'] == com_id: 
+                        COMMENT.remove(com)
+                        print('COMMENT DELETED')
+
 
 class Admin(Moderator):
     """docstring for Admin."""
