@@ -14,7 +14,19 @@ class User(object):
         self.password = password
         self.role = "user"
 
-    def edit_comment(self, com_id):
+
+    def signup_user(self):
+        """User signup"""
+        newUser = {
+            "username" : self.username,
+            "firstname" : self.firstname,
+            "password": self.password,
+            "role": self.role
+        }
+
+        USER.append(newUser)
+        
+     def edit_comment(self, com_id):
         """ Edits user comment """
         for user in LOGGED_IN:
             if user['username'] == self.username: 
@@ -35,3 +47,29 @@ class User(object):
 
             else:
                 print('Please login')
+
+class Moderator(User):
+    """docstring for Moderator."""
+    pass
+
+class Admin(Moderator):
+    """docstring for Admin."""
+    pass
+
+class Comment:
+    """docstring for Comment."""
+    def get_comment(comment):
+        comment = input("Add your comment here: ")
+        commented_at = datetime.datetime.utcnow()
+        new_comment = {
+        "user" :
+        }
+    def add_comment()
+
+
+
+if __name__ == '__main__':
+    while True:
+        "Welcome to The agile group challenge: "
+        pass
+
