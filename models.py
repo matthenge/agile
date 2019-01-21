@@ -1,5 +1,10 @@
 import datetime
 
+COMMENT = []
+LOGGED_IN= []
+USER = []
+
+
 class User(object):
     """ main user creation class """
     def __init__(self, username,password,firstname):
@@ -21,10 +26,14 @@ class Admin(Moderator):
 
 class Comment:
     """docstring for Comment."""
-    comments = []
-    def add_comment(comment):
+    def get_comment(comment):
         comment = input("Add your comment here: ")
         commented_at = datetime.datetime.utcnow()
+        new_comment = {
+        "user" :
+        }
+    def add_comment()
+
 
 
 if __name__ == '__main__':
