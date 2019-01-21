@@ -14,29 +14,18 @@ class User(object):
         self.password = password
         self.role = "user"
 
-    def add_default_role(self)
-
 class Moderator(User):
     """docstring for Moderator."""
-    pass
+    def delete_comment(self, com_id):
+        """ delete user comment """
+        for user in LOGGED_IN:
+            if user['username'] == self.username: 
+                for com in COMMENT:
+                    if com['id'] == com_id: 
+                        COMMENT.remove(com)
+                        print('COMMENT DELETED')
+
 
 class Admin(Moderator):
     """docstring for Admin."""
     pass
-
-class Comment:
-    """docstring for Comment."""
-    def get_comment(comment):
-        comment = input("Add your comment here: ")
-        commented_at = datetime.datetime.utcnow()
-        new_comment = {
-        "user" :
-        }
-    def add_comment()
-
-
-
-if __name__ == '__main__':
-    while True:
-        "Welcome to The agile group challenge: "
-        pass
