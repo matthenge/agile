@@ -14,7 +14,16 @@ class User(object):
         self.password = password
         self.role = "user"
 
-    def add_default_role(self)
+    def signup_user(self):
+        """User signup"""
+        newUser = {
+            "username" : self.username,
+            "firstname" : self.firstname,
+            "password": self.password,
+            "role": self.role
+        }
+
+        USER.append(newUser)
 
 class Moderator(User):
     """docstring for Moderator."""
